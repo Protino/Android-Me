@@ -11,3 +11,4 @@ android:
     - sys-img-armeabi-v7a-android-22
     - sys-img-armeabi-v7a-android-17
 language: android
+jdk: oraclejdk8
