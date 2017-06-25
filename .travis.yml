@@ -1,5 +1,9 @@
 android:
   components:
+    - tools
+    - platform-tools
+    - tools
+
     # Build tools version
     - build-tools-26.0.0
     # Compile SDK version
@@ -10,7 +14,7 @@ android:
     - extra-android-m2repository
     - sys-img-armeabi-v7a-android-21
   licenses:
-    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
 language: android
