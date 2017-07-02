@@ -22,9 +22,10 @@ jdk: oraclejdk8
 
 # Emulator Management: Create, Start and Wait
 before_script:
-  - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
-  - emulator -avd test -no-skin -no-audio -no-window &
+  - echo no | android create avd --force --name test --target android-23 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window -gpu off -no-boot-anim &
   - android-wait-for-emulator
+  - adb devices
   - adb shell input keyevent 82 &
 
 script:
@@ -45,10 +46,3 @@ env:
     - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
     - SDK=${TRAVIS_BUILD_DIR}/android-sdk
     - PATH=${GRADLE_USER_HOME}/bin/:${SDK}/:${SDK}/tools/:${SDK}/platform-tools/:${PATH}
-
-before_install:
-  - echo "WARNING delete this when fixed"; export OLD_SDK=/usr/local/android-sdk-26.0.0;
-                                           mkdir -p ${SDK};
-                                           cp -u -R ${OLD_SDK}/platforms ${SDK}/platforms;
-                                           cp -u -R ${OLD_SDK}/system-images ${SDK}/system-images;
-                                           cp -u -R ${OLD_SDK}/tools ${SDK}/tools || echo "CP ERROR"
