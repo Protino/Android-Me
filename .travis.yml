@@ -1,13 +1,5 @@
 android:
   components:
-    - tools
-    - platform-tools
-    - tools
-
-    # Build tools version
-    - build-tools-26.0.0
-    # Compile SDK version
-    - android-26
 
     # Additional components
     - extra-google-m2repository
