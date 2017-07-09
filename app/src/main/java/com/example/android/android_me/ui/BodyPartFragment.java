@@ -29,7 +29,7 @@ public class BodyPartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_body_part,container,false);
 
-        bodyImage = rootView.findViewById(R.id.bodyImageView);
+        bodyImage = (ImageView) rootView.findViewById(R.id.bodyImageView);
 
         bodyImage.setImageResource(AndroidImageAssets.getHeads().get(0));
         bodyImage.setContentDescription("Head");
