@@ -13,8 +13,6 @@ import org.junit.runner.RunWith;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-
 /**
  * @author root
  */
@@ -28,9 +26,9 @@ public class AndroidMeActivityTest {
             (AndroidMeActivity.class);
 
     @Test
-    public void checkHeadDisplay(){
-
-
+    public void checkHeadDisplay() {
         onView(withContentDescription("Head")).check(matches(withContentDescription("Head")));
+        onView(withContentDescription("Body")).check(matches(withContentDescription("Body")));
+        onView(withContentDescription("Leg")).check(matches(withContentDescription("Leg")));
     }
 }
