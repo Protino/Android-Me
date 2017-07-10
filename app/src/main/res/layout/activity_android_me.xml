@@ -30,21 +30,18 @@
 		android:paddingTop="@dimen/activity_vertical_margin">
 
 
-		<!-- This container holds the head BodyPartFragment of the custom Android-Me image -->
 		<FrameLayout
 			android:id="@+id/head_container"
 			android:layout_width="match_parent"
 			android:layout_height="180dp"
 			android:scaleType="centerInside"/>
 
-		<!-- This container holds the head BodyPartFragment of the custom Android-Me image -->
 		<FrameLayout
 			android:id="@+id/body_container"
 			android:layout_width="match_parent"
 			android:layout_height="180dp"
 			android:scaleType="centerInside"/>
 
-		<!-- This container holds the head BodyPartFragment of the custom Android-Me image -->
 		<FrameLayout
 			android:id="@+id/leg_container"
 			android:layout_width="match_parent"

@@ -33,6 +33,7 @@ public class BodyPartFragment extends Fragment {
     private List<Integer> imageIds;
 
     private int listIndex;
+    private String contentDescription;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the fragment
@@ -56,6 +57,7 @@ public class BodyPartFragment extends Fragment {
 
         // Set the image to the first in our list of head images
         imageView.setImageResource(imageIds.get(listIndex));
+        imageView.setContentDescription(contentDescription);
 
         // Return the rootView
         return rootView;
@@ -77,5 +79,9 @@ public class BodyPartFragment extends Fragment {
 
     public void setImageIds(List<Integer> imageIds) {
         this.imageIds = imageIds;
+    }
+
+    public void setContentDescription(String contentDescription) {
+        this.contentDescription = contentDescription;
     }
 }
